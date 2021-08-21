@@ -1,0 +1,206 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Baloo 2", cursive;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1117px;
+  margin: 0 auto;
+}
+
+/* header {
+  background-image: url(./img/wave.png);
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+} */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+nav ul li {
+  list-style: none;
+}
+
+.sign-up {
+  background-color: #f9ea4b;
+  padding: 3px 15px;
+  border-radius: 2em;
+  color: #4a6d92;
+  /* border: 1px solid #4a6d92; */
+  /* box-shadow: 3px 4px 5px #4a6d92; */
+}
+nav ul .sign-up:hover {
+  background-color: #4a6d92;
+  cursor: pointer;
+  color: #f9ea4b;
+  transition: 0.7s;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #4a6d92;
+}
+
+nav ul li a:hover {
+  color: #c9ba14;
+}
+
+nav .logo {
+  font-size: 35px;
+  color: #4a6d92;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+}
+.hero .desc {
+  padding-top: 150px;
+}
+
+.hero .desc h4 {
+  font-size: 3.4em;
+  color: #4a6d92;
+  line-height: 0.93em;
+  padding-bottom: 17px;
+}
+
+.hero .desc p {
+  font-size: 1em;
+  padding-bottom: 25px;
+  font-weight: 500;
+}
+
+.hero .desc a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #4a6d92;
+}
+.hero .desc a:hover {
+  color: #f9ea4b;
+}
+.btn-explore {
+  background-color: #f9ea4b;
+  padding: 4px 30px;
+  box-sizing: border-box;
+  font-size: 1.2em;
+  box-shadow: 1px 3px 5px #4a6d92;
+  border-radius: 10px;
+}
+.btn-explore:hover {
+  background-color: #4a6d92;
+  padding: 4px 30px;
+  box-sizing: border-box;
+  font-size: 1.2em;
+  box-shadow: 1px 3px 5px #f9ea4b;
+  border-radius: 10px;
+  transition: 0.6s;
+}
+
+.nav_toggle {
+  display: none;
+}
+
+.imghero img {
+  width: 670px;
+  height: auto;
+  padding-top: 40px;
+}
+
+/* Responsive Breakpoin */
+/* Ukuran tabel atau ketika hp di landscape */
+@media screen and (max-width: 768px) {
+  nav ul {
+    width: 55%;
+  }
+  nav {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+  }
+  .hero .desc,
+  .hero .imghero {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/* Ukuran Mobile */
+@media screen and (max-width: 576px) {
+  .nav_toggle {
+    display: flex;
+  }
+  nav {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .nav_toggle {
+    font-size: 2rem;
+    z-index: 3;
+  }
+
+  nav ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    flex-direction: column;
+    background-color: #f9ea4b;
+    color: #4a6d92;
+    width: 55%;
+    justify-content: space-evenly;
+    text-align: center;
+    z-index: 2;
+    transform: translateX(100%);
+    transition: all 1s;
+  }
+
+  nav ul .sign-up {
+    background-color: #4a6d92;
+    color: #f9ea4b;
+    padding: 5px 30px;
+    /* border: 1px solid #4a6d92; */
+    /* box-shadow: 3px 4px 5px #4a6d92; */
+  }
+  nav ul .sign-up:hover {
+    background-color: #1a436e;
+    cursor: pointer;
+    color: #cabe39;
+    transition: 0.7s;
+  }
+  .imghero {
+    padding-right: 50px;
+  }
+
+  .imghero img {
+    width: 400px;
+    height: auto;
+  }
+
+  nav ul.slide {
+    transform: translateX(0);
+  }
+}
